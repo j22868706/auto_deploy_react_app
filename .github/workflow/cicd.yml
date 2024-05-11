@@ -1,0 +1,34 @@
+name: CICD
+
+on:
+  push:
+    branches: 
+      -deploy-to-ec2
+
+jobs:
+  build:
+    runs-on: ubuntu-lattest
+    steps:
+      -name: Checkout Source
+        uses: actions/checkout@v2
+      -name: Login to Dokcer Hub
+        run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+      -name: Build Docker Image
+        run: docker build -t j22868706/my_first_react_app .
+      -name: Publish image to docker hub
+        run: docker push j22868706/my_first_react_app:latest
+
+  deploy:
+    needs: build
+    runs-on: aws-ec2
+    steps:
+      -name: Pull image from docker hub
+       run: docker pull j22868706/my_first_react_app:latest
+      -name: Delete Old Container
+        run: docker rm -f reactContainer
+      -name: Run docker container
+        run: docker run -d -p 3000:80 --name reactContainer j22868706/my_first_react_app
+
+      
+
+      
