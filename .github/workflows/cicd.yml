@@ -28,7 +28,6 @@ jobs:
           host: ${{ secrets.HOST_DNS }}
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          envs: GITHUB_SHA
-          scirpt: |
+          script: |
             sudo docker pull j22868706/my_first_react_app:latest
             sudo docker run -d -p 3000:80 --name test1 j22868706/my_first_react_app:latest
