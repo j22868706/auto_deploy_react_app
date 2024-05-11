@@ -30,10 +30,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Pull image from Docker Hub
         run: docker pull j22868706/my_first_react_app:latest
-      - name: Check if container exists and remove it
-        run: |
-          if docker ps -a --format '{{.Names}}' | grep -Eq "^reactContainer$"; then
-            docker rm -f reactContainer
-          fi
       - name: Run Docker container
         run: docker run -d -p 3000:80 --name reactContainer j22868706/my_first_react_app:latest
