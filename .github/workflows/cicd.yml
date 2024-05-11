@@ -29,8 +29,8 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY}}
       - name: Pull image from Docker Hub
-        run: docker pull j22868706/my_first_react_app:latest
+        run: sudo docker pull j22868706/my_first_react_app:latest
       - name: Delete Old Container
-        run: docker rm -f reactContainer || true
+        run: sudo docker rm -f reactContainer || true
       - name: Run Docker container
-        run: docker run -d -p 3000:80 --name reactContainer j22868706/my_first_react_app:latest
+        run: sudo docker run -d -p 3000:80 --name reactContainer j22868706/my_first_react_app:latest
