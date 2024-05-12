@@ -11,8 +11,5 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 COPY --from=build /app/dist .
 
-# Copy Nginx configuration files
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY test.conf /etc/nginx/conf.d/test.conf
-
 EXPOSE 80
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
