@@ -30,4 +30,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             sudo docker pull j22868706/my_first_react_app:latest
-            sudo docker run -d -p 3000:80 --name test1 j22868706/my_first_react_app:latest
+            sudo docker kill test1
+            sudo docker rm test1
+            sudo docker run -d -p 443:443 --name test1 j22868706/my_first_react_app:latest
