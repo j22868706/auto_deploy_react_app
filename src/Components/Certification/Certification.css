@@ -52,3 +52,31 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
+
+
+@media(max-width: 768px) {
+    .certification{
+        gap:30px;
+     }
+    .certification-title h1{
+        width: 90%;
+        font-size: 50px;
+    }
+    .certification-container{
+        grid-template-columns: 1fr ;
+        gap: 20px;
+    }
+    .certification-format h3{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .certification-format p{
+        font-size: 18px;
+        line-height: 40px;
+        max-width: 300px;
+    }
+    .certification-format {
+        padding: 40px;
+    }
+}

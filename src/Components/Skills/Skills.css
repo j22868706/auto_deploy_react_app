@@ -69,3 +69,29 @@
   border-radius: 50px;
   background: black;
 }  
+
+@media(max-width: 768px) {
+  .skills {
+
+    gap: 20px;
+    margin: 20px 170px;
+  }
+  .skills-title h1 {
+    font-size: 40px;
+  }
+
+  .skills-left {
+    display: none;
+  }
+  .skills-sections{
+    flex-direction: column;
+  }
+  .skills-para {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .skills-skill hr{
+    height: 6px;
+  }
+
+}

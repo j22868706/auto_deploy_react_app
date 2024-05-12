@@ -46,3 +46,13 @@
     height: 80px;
     cursor: pointer;
 }
+
+@media(max-width: 768px) {
+    .profile img {
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
+}

@@ -6,8 +6,8 @@ import Certification_date from '../../assets/certification_data'
 const Certification = () => {
   return (
     <div className='certification'>
-<div className="certification-title">
-            <h1>My Certification</h1>
+        <div className="certification-title">
+            <h1>Certification</h1>
         </div>
         <div className="certification-container">
             {Certification_date.map((certification, index) => {
