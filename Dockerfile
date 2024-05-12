@@ -15,9 +15,5 @@ COPY --from=build /app/dist .
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY test.conf /etc/nginx/conf.d/test.conf
 
-# Copy SSL Certificates
-COPY /etc/letsencrypt/live/blog.may11th2023.com/fullchain.pem /etc/nginx/cert.pem
-COPY /etc/letsencrypt/live/blog.may11th2023.com/privkey.pem /etc/nginx/key.pem
-
 EXPOSE 443
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
