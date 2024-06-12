@@ -7,7 +7,9 @@ const Certification_Data = [
     },
     {
         c_name:"AWS Solution Architect Associate",
-        v_num:"Preparing ......",
+        v_num:"Validation Number: b6b9a8297790450ea97e956372144165",
+        i_date:'Issue Date: June 8, 2024',
+        e_date:'Expiration Date: June 8, 2027'
     }
 ]
 
