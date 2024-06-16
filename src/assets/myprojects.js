@@ -10,7 +10,7 @@ const Myporjects = [
     {
         p_name:'taipeiDayTrip',
         p_img:taipeidaytrip_img,
-        p_url:'https://github.com/j22868706/taipeiDayTrip'
+        p_url:'https://sptaipeidaytrip.leechih.us/'
     }
 ]
 
