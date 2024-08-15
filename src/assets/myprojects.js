@@ -5,7 +5,7 @@ const Myporjects = [
     {
         p_name:'Simp.com',
         p_img:simp_img,
-        p_url:'https://github.com/j22868706/project_Simp.com'
+        p_url:'https://spsimp.leechih.us/'
     },
     {
         p_name:'taipeiDayTrip',
